@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies SPA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Actosoft Movies App</h1>
+    <section id="movies-list">
+        <h3>Películas disponibles</h3>
+    </section>
+    <section id="movies-form">
+        <h3>Agrega una nueva película</h3>
+        <form action="." method="GET">
+            <input
+                type="text"
+                placeholder="Título"
+                name="name"
+                id="name-input"
+            >
+            <input
+            type="text"
+            placeholder="Director"
+            name="director"
+            id="director-input"
+            >
+        </form>
+        <ul id="errors"></ul>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
