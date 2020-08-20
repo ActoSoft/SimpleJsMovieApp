@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Chat by Actosoft</title>
+</head>
+<body>
+    <header><h1>Chat en tiempo real</h1></header>
+    <main>
+        <section id='messages'>
+            <h1>Lista de mensajes</h1>
+        </section>
+        <section>
+            <h3>Enviar mensaje</h3>
+            <input
+                placeholder="Escribe un mensaje"
+                type="text"
+                id="message"
+            >
+            <button id="sendMessage">Enviar</button>
+        </section>
+    </main>
+    <footer><p>Developed by Actosoft 2020</p></footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
