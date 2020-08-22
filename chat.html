@@ -6,8 +6,15 @@
     <title>Realtime Chat by Actosoft</title>
 </head>
 <body>
-    <header><h1>Chat en tiempo real</h1></header>
+    <header>
+        <h1>Chat en tiempo real</h1>
+        <div id="user-info"></div>
+    </header>
     <main>
+        <section>
+            <button id="loginWithGoogle">Inicia sesión con Google</button>
+            <button id="logout" style="display: none;">Cerrar sesión</button>
+        </section>
         <section id='messages'>
             <h1>Lista de mensajes</h1>
         </section>
@@ -28,6 +35,7 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
     <script src="js/chat.js"></script>
 </body>
 </html>
