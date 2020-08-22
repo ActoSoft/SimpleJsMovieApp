@@ -19,7 +19,8 @@ sendButton.addEventListener('click', function(event) {
   event.preventDefault();
   // console.log(messageInput.value)
   db.collection('mensajes').add({
-    message: messageInput.value
+    message: messageInput.value,
+    timestamp: firebase.firestore.Timestamp.now()
   }).then(function() {
     alert('Mensaje guardado correctamente')
   }).catch(function(error) {
@@ -30,15 +31,20 @@ sendButton.addEventListener('click', function(event) {
 })
 
 document.addEventListener('DOMContentLoaded', function() {
-  db.collection('mensajes').onSnapshot(function(querySnapshot) {
+  db.collection('mensajes')
+  .orderBy("timestamp", "asc")
+  .onSnapshot(function(querySnapshot) {
     const messages = [];
     querySnapshot.forEach(function (item){
       messages.push(item.data())
     })
     let innerHtml = '<ul>'
     messages.forEach(function(message) {
+      // timestamp.toDate regresa un objeto tipo Date de javascript
+      // al tener un objeto Date de javascript podemos utilizar sus métodos
+      // Uno de sus métodos es toLocaleString
       innerHtml += `
-        <li>${message.message}</li>
+        <li>${message.message} --- ${message.timestamp.toDate().toLocaleString()}</li>
       `
     })
     innerHtml += '</ul>'
