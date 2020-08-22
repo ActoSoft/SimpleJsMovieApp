@@ -67,12 +67,13 @@ document.addEventListener('DOMContentLoaded', function() {
       `
       googleButton.style.display = "none"
       logoutButton.style.display = "block"
+      sendButton.disabled = false
     } else {
       console.log('No está logueado')
       userInfoContainer.innerHTML = ''
       googleButton.style.display = "block"
       logoutButton.style.display = "none"
-      sendButton.disabled = "true"
+      sendButton.disabled = true
     }
   })
   db.collection('mensajes')
