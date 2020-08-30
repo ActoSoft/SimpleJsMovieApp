@@ -25,6 +25,11 @@
                 type="text"
                 id="message"
             >
+            <input
+                type="file"
+                accept="image/png, image/jpeg, image/jpg"
+                id='image-input'
+            >
             <button id="sendMessage">Enviar</button>
         </section>
     </main>
@@ -36,6 +41,7 @@
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-storage.js"></script>
     <script src="js/chat.js"></script>
 </body>
 </html>
